@@ -1,0 +1,333 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #f4f6f9;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #1e3a8a !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 700;
+}
+
+.navbar-brand small {
+    color: #dbeafe;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #dbeafe !important;
+}
+
+/* Cards */
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Tables */
+
+.table {
+    background-color: white;
+}
+
+/* Footer */
+
+.footer {
+    padding: 15px 0;
+    background-color: white;
+}
+
+/* Forms */
+
+.form-control {
+    border-radius: 6px;
+}
+
+/* Buttons */
+
+.btn-primary {
+    background-color: #1e3a8a;
+    border-color: #1e3a8a;
+}
+
+.btn-primary:hover {
+    background-color: #1a3273;
+    border-color: #1a3273;
+}
+
+/* Focus */
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem rgba(30,58,138,.25);
+}
+
+/* SECON Background Watermark */
+
+.auth-background {
+    background-image: url('/images/secon-logo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    opacity: 0.08;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+/*==========================================
+        Custom Breadcrumb
+===========================================*/
+
+/*.breadcrumb {
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    margin-bottom: 20px;
+}
+
+.breadcrumb-item a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+    .breadcrumb-item a:hover {
+        color: #084298;
+    }
+
+.breadcrumb-item.active {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "➜";
+    color: #6c757d;
+    padding: 0 10px;
+}*/
+/* ==========================================================
+   AI ASSISTANT
+========================================================== */
+
+#aiButton {
+    position: fixed;
+    right: 25px;
+    bottom: 75px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: 28px;
+    z-index: 9999;
+    animation: pulse 2s infinite;
+}
+
+#aiChatBox {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+    width: 400px;
+    height: 600px;
+    z-index: 9999;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#chatMessages {
+    height: 360px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    padding: 15px;
+}
+
+.input-group {
+    height: 50px;
+}
+    #chatMessages::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    #chatMessages::-webkit-scrollbar-thumb {
+        background: #0d6efd;
+        border-radius: 10px;
+    }
+
+.quickQuestion {
+    margin: 3px;
+    border-radius: 25px;
+}
+
+#txtQuestion {
+    border-radius: 25px;
+}
+
+#btnSend {
+    border-radius: 25px;
+}
+
+.typing {
+    display: flex;
+    gap: 6px;
+}
+
+    .typing span {
+        width: 10px;
+        height: 10px;
+        background: #0d6efd;
+        border-radius: 50%;
+        animation: typing .8s infinite;
+    }
+
+        .typing span:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        .typing span:nth-child(3) {
+            animation-delay: .4s;
+        }
+
+@keyframes typing {
+
+    0% {
+        transform: translateY(0);
+        opacity: .5;
+    }
+
+    50% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: .5;
+    }
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(13,110,253,.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(13,110,253,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(13,110,253,0);
+    }
+}
+
+@keyframes slideUp {
+
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#chatMessages .alert {
+    border-radius: 15px;
+}
+#aiChatBox .card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+}
+.typing {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+    .typing span {
+        width: 10px;
+        height: 10px;
+        background: #0d6efd;
+        border-radius: 50%;
+        animation: typing 1s infinite;
+    }
+
+        .typing span:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        .typing span:nth-child(3) {
+            animation-delay: .4s;
+        }
+
+@keyframes typing {
+
+    0% {
+        transform: translateY(0);
+        opacity: .4;
+    }
+
+    50% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: .4;
+    }
+}

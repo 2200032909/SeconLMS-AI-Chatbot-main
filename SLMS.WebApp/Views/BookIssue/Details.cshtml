@@ -1,0 +1,81 @@
+﻿@model SLMS.WebApp.Models.BookIssueViewModel
+
+@{
+    ViewData["Title"] = "Book Issue Details";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-light p-2 rounded shadow-sm mb-3">
+
+        <li class="breadcrumb-item">
+            <a asp-controller="Home"
+               asp-action="Index">
+                Dashboard
+            </a>
+        </li>
+
+        <li class="breadcrumb-item">
+            <a asp-controller="BookIssue"
+               asp-action="Index">
+                Book Issues
+            </a>
+        </li>
+
+        <li class="breadcrumb-item active"
+            aria-current="page">
+            Book Issue Details
+        </li>
+
+    </ol>
+</nav>
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <h3>Book Issue Details</h3>
+        <hr />
+
+        <dl class="row">
+
+            <dt class="col-sm-3">
+                Book Title
+            </dt>
+            <dd class="col-sm-9">
+                @Model.BookTitle
+            </dd>
+
+            <dt class="col-sm-3">
+                Employee Name
+            </dt>
+            <dd class="col-sm-9">
+                @Model.EmployeeName
+            </dd>
+
+            <dt class="col-sm-3">
+                Issue Date
+            </dt>
+            <dd class="col-sm-9">
+                @Model.IssueDate.ToShortDateString()
+            </dd>
+
+            <dt class="col-sm-3">
+                Due Date
+            </dt>
+            <dd class="col-sm-9">
+                @(Model.DueDate?.ToShortDateString())
+            </dd>
+
+            <dt class="col-sm-3">
+                Status
+            </dt>
+            <dd class="col-sm-9">
+                @Model.Status
+            </dd>
+
+        </dl>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+            Back
+        </a>
+
+    </div>
+</div>

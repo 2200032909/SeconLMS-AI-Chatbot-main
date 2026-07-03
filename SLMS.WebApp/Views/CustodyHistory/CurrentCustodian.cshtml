@@ -1,0 +1,36 @@
+﻿@model SLMS.WebApp.Models.CustodyHistoryViewModel
+
+@{
+    ViewData["Title"] = "Current Custodian";
+}
+
+<h2>Current Custodian</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Inventory Item</th>
+        <td>@Model.InventoryItemId</td>
+    </tr>
+
+    <tr>
+        <th>Current Department</th>
+        <td>@Model.ToDepartmentName</td>
+    </tr>
+
+    <tr>
+        <th>Transfer Date</th>
+        <td>@Model.TransferDate.ToString("dd-MMM-yyyy")</td>
+    </tr>
+
+    <tr>
+        <th>Reason</th>
+        <td>@Model.TransferReason</td>
+    </tr>
+
+</table>
+
+<a asp-action="Index"
+   class="btn btn-secondary">
+    Back
+</a>
